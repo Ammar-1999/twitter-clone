@@ -39,10 +39,7 @@
     "@types/bcrypt": "^5.0.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-<<<<<<< HEAD
     "prisma": "^4.13.0",
-=======
->>>>>>> ed8bf8611789a223acab4da9b37457e0168f06ab
     "tailwindcss": "^3.2.7"
   }
 }
