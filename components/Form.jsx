@@ -68,6 +68,7 @@ const Form = ({ placeholder, isComment, postId }) => {
       await axios.post(url, { body: input, img });
 
       toast.success("Tweet created");
+      setSelectedFile(null);
       setInput("");
       mutatePosts();
       mutatePost();
