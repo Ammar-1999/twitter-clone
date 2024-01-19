@@ -24,8 +24,8 @@ const Avatar = ({ userId, isLarge, hasBorder }) => {
     <div
       className={`
         ${hasBorder ? "border-4 border-black" : ""}
-        ${isLarge ? "min-h-32" : "min-h-12"}
-        ${isLarge ? "min-w-32" : "min-w-12"}
+        ${isLarge ? "min-h-[128px]" : "min-h-[48px]"}
+        ${isLarge ? "min-w-[128px]" : "min-w-[48px]"}
         rounded-full 
         hover:opacity-90 
         transition 
