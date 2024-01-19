@@ -6,12 +6,7 @@ import {
   PhotographIcon,
   XIcon,
 } from "@heroicons/react/outline";
-import {
-  ref,
-  uploadBytes,
-  getDownloadURL,
-  uploadString,
-} from "firebase/storage";
+import { ref, getDownloadURL, uploadString } from "firebase/storage";
 import { Picker } from "emoji-mart";
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegisterModal from "@/hooks/useRegisterModal";
@@ -85,7 +80,7 @@ const Form = ({ placeholder, isComment, postId }) => {
 
   return (
     <div className="border-b-[1px] border-neutral-800 px-5 py-2">
-      {currentUser ? (
+      {true ? (
         <div className="flex flex-row gap-4">
           <div>
             <Avatar userId={currentUser?.id} />
@@ -132,7 +127,7 @@ const Form = ({ placeholder, isComment, postId }) => {
             </div>
             {!isLoading && (
               <div className="flex items-center justify-between pt-2.5">
-                <div className="flex items-center">
+                <div className="flex items-center z-10">
                   <div
                     className="icon"
                     onClick={() => filePickerRef.current.click()}
