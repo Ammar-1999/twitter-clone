@@ -2,7 +2,6 @@ import serverAuth from "@/libs/serverAuth";
 import prisma from "@/libs/prismadb";
 
 export default async function handler(req, res) {
-  console.log("posts ####################");
   if (req.method !== "POST" && req.method !== "GET") {
     return res.status(405).end();
   }
@@ -10,11 +9,12 @@ export default async function handler(req, res) {
   try {
     if (req.method === "POST") {
       const { currentUser } = await serverAuth(req, res);
-      const { body } = req.body;
+      const { body, img } = req.body;
 
       const post = await prisma.post.create({
         data: {
           body,
+          img,
           userId: currentUser.id,
         },
       });

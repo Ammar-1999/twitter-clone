@@ -93,6 +93,11 @@ const PostItem = ({ data = {}, userId }) => {
             <span className="text-neutral-500 text-sm">{createdAt}</span>
           </div>
           <div className="text-white mt-1">{data.body}</div>
+          <img
+            src={data?.img}
+            alt=""
+            className="rounded-2xl max-h-[700px] object-cover mr-2"
+          />
           <div className="flex flex-row items-center mt-3 gap-10">
             <div
               className="
